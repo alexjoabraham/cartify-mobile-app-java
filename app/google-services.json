@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "877456435439",
+    "firebase_url": "https://project2-login-register-fb-default-rtdb.firebaseio.com",
+    "project_id": "project2-login-register-fb",
+    "storage_bucket": "project2-login-register-fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877456435439:android:9c10a23b781760feab131a",
+        "android_client_info": {
+          "package_name": "com.alex_jo_abraham.project2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSAHUoIwCAn6-1Ul1Tzfb0pl-6yJkOH5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
