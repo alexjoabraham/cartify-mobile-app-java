@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_alternates_bold"
         android:gravity="center"
-        android:text="cartify"
-        android:textSize="60dp" />
+        android:text="@string/cartify"
+        android:textSize="60sp" />
 
     <Button
         android:id="@+id/btn_login"

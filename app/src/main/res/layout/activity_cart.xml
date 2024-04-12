@@ -17,12 +17,12 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="20sp"
-        android:text="Cart" />
+        android:text="@string/cart" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cartRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:padding="8dp"
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Price: $0.00" />
+            android:text="@string/price_0_00" />
 
         <!-- Taxes -->
         <TextView
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Taxes (HST 15%): $0.00"
+            android:text="@string/taxes_hst_15_0_00"
             android:textColor="@android:color/darker_gray" />
 
         <!-- Amount to Pay -->
@@ -69,9 +69,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Amount to Pay: $0.00"
-            android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:text="@string/amount_to_pay_0_00"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <!-- Checkout button -->
         <Button
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/lato"
-            android:text="Checkout"
+            android:text="@string/checkout"
             app:icon="@drawable/shoppingcartcheckout24px" />
 
     </LinearLayout>

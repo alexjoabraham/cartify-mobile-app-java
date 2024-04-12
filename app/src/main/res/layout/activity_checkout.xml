@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/lato"
-        android:text="Shipment Details"
+        android:text="@string/shipment_details"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/checkOutTextView" />
@@ -25,7 +25,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/lato"
         android:gravity="center"
-        android:text="Checkout"
+        android:text="@string/checkout"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato"
-                android:hint="First Name" />
+                android:hint="@string/first_name" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato"
-                    android:hint="Last Name" />
+                    android:hint="@string/last_name" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lato"
-                        android:hint="Address" />
+                        android:hint="@string/address" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato"
-                            android:hint="Mobile" />
+                            android:hint="@string/mobile" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -123,7 +123,7 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="339dp"
         android:fontFamily="@font/lato"
-        android:text="Payment Information"
+        android:text="@string/payment_information"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -150,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato"
-                android:hint="Card Number" />
+                android:hint="@string/card_number" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -167,7 +167,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lato"
-                        android:hint="MM/YY" />
+                        android:hint="@string/mm_yy" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -181,7 +181,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/lato"
-                        android:hint="CVV" />
+                        android:hint="@string/cvv" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
@@ -196,7 +196,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/lato"
-                    android:hint="Name on Card" />
+                    android:hint="@string/name_on_card" />
             </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -207,7 +207,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:fontFamily="@font/lato"
-        android:text="Place Order"
+        android:text="@string/place_order"
         app:icon="@drawable/placeitem24px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
