@@ -42,18 +42,20 @@
         android:layout_below="@id/user_details"
         android:clipToPadding="false"
         android:scrollbars="vertical"
-        android:layout_marginBottom="60dp"
         tools:listitem="@layout/item_product" />
 
     <!-- Cart Button at the Bottom -->
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/viewCartButton"
-        style="@style/Widget.Material3.Button.ElevatedButton"
+        style="@style/Widget.Material3.FloatingActionButton.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/shoppingcart24px"
         android:text="View Cart"
         android:fontFamily="@font/lato"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"/>
 </RelativeLayout>

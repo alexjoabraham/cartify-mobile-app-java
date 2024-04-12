@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
@@ -26,7 +27,7 @@ public class ProductsActivity extends AppCompatActivity {
     FirebaseUser user;
     ProductAdapter productAdapter;
     RecyclerView recyclerView;
-    Button viewCartButton;
+    FloatingActionButton viewCartButton;
 
     @Override
     protected void onStart() {

@@ -13,9 +13,19 @@
     <ImageView
         android:id="@+id/logoTextImage"
         android:layout_width="wrap_content"
-        android:layout_height="268dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/logo_text"
-        android:src="@drawable/logotext" />
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/logoTextView"
+        android:textColor="@color/logo_textview_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:gravity="center"
+        android:text="cartify"
+        android:textSize="60dp" />
 
     <Button
         android:id="@+id/btn_login"
