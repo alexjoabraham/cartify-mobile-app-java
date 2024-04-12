@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="end"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <!-- Total price -->
@@ -52,8 +52,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
-            android:text="Total Price: $0.00"
-            android:textStyle="bold" />
+            android:text="Price: $0.00" />
+
+        <!-- Taxes -->
+        <TextView
+            android:id="@+id/taxesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="Taxes (HST 15%): $0.00"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Amount to Pay -->
+        <TextView
+            android:id="@+id/amountToPayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="Amount to Pay: $0.00"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
         <!-- Checkout button -->
         <Button
@@ -66,5 +84,6 @@
             app:icon="@drawable/shoppingcartcheckout24px" />
 
     </LinearLayout>
+
 
 </LinearLayout>

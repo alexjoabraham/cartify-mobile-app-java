@@ -30,6 +30,8 @@ public class CartActivity extends AppCompatActivity {
     CartAdapter cartAdapter;
     TextView totalPriceTextView;
     Button checkOutButton;
+    TextView taxesTextView;
+    TextView amountToPayTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,8 @@ public class CartActivity extends AppCompatActivity {
         totalPriceTextView = findViewById(R.id.totalPriceTextView);
         recyclerView = findViewById(R.id.cartRecyclerView);
         checkOutButton = findViewById(R.id.checkoutButton);
+        taxesTextView = findViewById(R.id.taxesTextView);
+        amountToPayTextView = findViewById(R.id.amountToPayTextView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         cartAdapter = new CartAdapter(this, new ArrayList<>());
@@ -69,6 +73,7 @@ public class CartActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 List<CartItem> cartItems = new ArrayList<>();
                 double totalPrice = 0.0;
+                double totalTaxes = 0.0;
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     CartItem cartItem = snapshot.getValue(CartItem.class);
@@ -76,11 +81,21 @@ public class CartActivity extends AppCompatActivity {
                         cartItems.add(cartItem);
                         // Calculate subtotal for each item and add to total price
                         String priceString = cartItem.getPrice().replaceAll(",", "");
-                        totalPrice += Double.parseDouble(priceString.substring(1)) * cartItem.getQuantity();
+                        double price = Double.parseDouble(priceString.substring(1));
+                        double subtotal = price * cartItem.getQuantity();
+                        totalPrice += subtotal;
+                        // Calculate taxes for each item
+                        double taxes = subtotal * 0.15; // HST is 15%
+                        totalTaxes += taxes;
                     }
                 }
-                // Set total price to TextView
-                totalPriceTextView.setText("Total Price: $" + String.format("%.2f", totalPrice));
+                // Calculate total amount to pay (including price and taxes)
+                double amountToPay = totalPrice + totalTaxes;
+
+                // Set total price, taxes, and amount to pay to TextViews
+                totalPriceTextView.setText("Price: $" + String.format("%.2f", totalPrice));
+                taxesTextView.setText("Taxes (HST 15%): $" + String.format("%.2f", totalTaxes));
+                amountToPayTextView.setText("Amount to Pay: $" + String.format("%.2f", amountToPay));
 
                 cartAdapter.setCartItemsList(cartItems);
             }
