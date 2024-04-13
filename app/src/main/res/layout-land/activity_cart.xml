@@ -88,6 +88,7 @@
                 android:fontFamily="@font/lato"
                 android:text="@string/checkout"
                 android:textSize="20sp"
+                app:iconSize="20dp"
                 app:icon="@drawable/shoppingcartcheckout24px" />
 
         </LinearLayout>
