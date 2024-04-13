@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp">
+
+    <!-- RecyclerView to display cart items -->
+    <TextView
+        android:id="@+id/cartTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:text="@string/cart"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_cart"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+    <!-- Tax -->
+
+
+    <!-- Total price and checkout button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Total price -->
+        <TextView
+            android:id="@+id/totalPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="40sp"
+            android:text="@string/price_0_00" />
+
+        <!-- Taxes -->
+        <TextView
+            android:id="@+id/taxesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="40sp"
+            android:text="@string/taxes_hst_15_0_00"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Amount to Pay -->
+        <TextView
+            android:id="@+id/amountToPayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/amount_to_pay_0_00"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <!-- Checkout button -->
+        <Button
+            android:id="@+id/checkoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/checkout"
+            android:textSize="40sp"
+            app:iconSize="40dp"
+            app:icon="@drawable/shoppingcartcheckout24px" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

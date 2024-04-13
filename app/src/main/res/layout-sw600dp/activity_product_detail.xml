@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/productImageView"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/product_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/productNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/product_name"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/productImageView" />
+
+    <TextView
+        android:id="@+id/productDescriptionTextView"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="80dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="9dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/product_description_fiiller_text_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/productNameTextView" />
+
+    <TextView
+        android:id="@+id/productPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/_0_00"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/quantityTextView" />
+
+    <TextView
+        android:id="@+id/quantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/quantity_1"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/productDescriptionTextView" />
+
+    <Button
+        android:id="@+id/decreaseQuantityButton"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/minus"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityTextView"
+        app:layout_constraintEnd_toStartOf="@+id/increaseQuantityButton"
+        app:layout_constraintTop_toTopOf="@+id/quantityTextView" />
+
+    <Button
+        android:id="@+id/increaseQuantityButton"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/plus"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quantityTextView" />
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="33dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/add_to_cart"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/productPriceTextView" />
+
+    <Button
+        android:id="@+id/goToCartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/go_to_cart"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addToCartButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
